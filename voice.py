@@ -30,7 +30,7 @@ def play(data, framerate=44100):
     output_stream = p.open(format=pyaudio.paInt16,
                            channels=1,
                            rate=framerate,
-                           output=True, frames_per_buffer=512)
+                           output=True, frames_per_buffer=128)
     output_stream.write(data)
     output_stream.close()
 
